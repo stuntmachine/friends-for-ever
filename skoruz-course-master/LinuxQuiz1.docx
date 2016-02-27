@@ -1,0 +1,79 @@
+﻿1. Suppose that the Current Working Directory is /lib/modules, give a single "CAT" command using a relative pathname
+and a command using an absolute pathname, that would print out the contents of the regular file /lib/security/pam-access.
+Command with Absolute Path:
+
+answer:cat /lib/security/pam-access
+
+Command with Relative Path:
+answer:cat ../security/pam-access
+
+2. What is the standard command to determine the pathname/location  of the mv command/program?
+Answer:Which mv
+
+3. What is the purpose of the /sbin subdirectory? (I.e., what is normally stored there?)
+
+answer: linux and unix stores utilities used for administration stored in the sbin directory.
+
+4. Explain the difference between “the root directory” and “root’s directory”.
+
+Answer: root directory is the system root and roots directory is users home directory.
+
+5. Explain what the term “search path” means in the context of a shell (like Bash).
+
+Search path in bash is like searching for a file in a path 
+ex:cat /Downloads/kiran/works/first.sh
+
+
+6. What are two commands that could be used to display your current search path?
+
+Answer: Echo $path and
+		printenv path 
+
+
+7. Suppose your current env PATH variable is set to /usr/bin:/bin:/usr/local/bin. Explain what
+the shell does when you type the command “foo” at a prompt (and type return).
+
+Answer:
+
+8. Logged in as a non-root user, is /sbin in your search path? Explain why it is or is not
+there.
+
+Answer: permission issue will be occurred for the non user because sbin contains admin utilities.
+
+9. Suppose you have created a shell script named foo and have made it executable, but
+when you type it as a command (“foo”), Bash says: “command not found”. What is
+wrong and what must you do to run the command?
+
+Answer:it is because of the path for executing the command.
+
+
+
+10. Explain why the Linux does not have drive letters like Windows does.
+
+Answer: because it has only single tree structure and everything is mounted inside it.
+
+11. What is the contents of a file ~/song.mp3?
+
+Answer: every file for the computer is 0's and 1's for the computer as usual the file song.mp3 will also has 0's and 1's.
+
+12. What command would show all lines containing the string “brace expansion” (ignoring
+case) in the man pages for Bash? 
+
+Answer:man bash | grep -i “brace expansion”
+here, man bash is the input for grep command and it will searches for the brace expansion and prints that line.
+
+13. What command would delete some files from the directory /tmp, where the relevant
+filenames have this pattern: they begin with “A” or “B”, contain the string “406”, and
+have a (final) extension of “.txt” or “.text”.
+
+Answer: rm {A,B}*406*{.txt,.text}
+
+
+14. What are the commands that will reset the current working directory to your home directory, regardless of what directory you are currently in?
+
+Cd –- ,cd ~;
+
+15. What are hidden files in Linux/UNIX, why are they called that, and what are they
+commonly used for?
+
+Answer: files hided in a directory are called hidden files they are not seen  normally while command ls is called.

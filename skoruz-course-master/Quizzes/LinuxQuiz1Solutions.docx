@@ -1,0 +1,88 @@
+Solutions:
+1. Paths to print out the contents of the regular file:
+
+absolute path: cat /lib/security/pam-access.so
+relative path: cat ../security/pam-access.so
+
+2. Command to determine path of mv:
+
+which mv
+
+3. Purpose of the /sbin subdirectory:
+
+According to the Linux Filesystem Hierarchy Standard: “Utilities used for system
+administration (and other root-only commands) are stored in /sbin, /usr/sbin, and
+/usr/local/sbin. /sbin contains binaries essential for booting, restoring, recovering,
+and/or repairing the system in addition to the binaries in /bin.”
+
+4. Root vs. root’s directory:
+
+“The root directory” refers to the directory at the root of the filesystem tree, which is
+denoted: / (forward slash). “Root’s directory” refers to the home directory of the user
+root (the administrator): /root.
+
+5. What “search path” means:
+
+In the context of a shell like Bash, “search path” refers to the sequence of directories
+that will be searched for a suitably named executable file when the user types a com-
+mand that does not specify a path (i.e., when the user just supplies a command name
+rather than its path).
+
+6. Two commands to display your current search path:
+
+(1) printenv PATH
+(2) echo $PATH
+
+7. Shell actions when type command “foo”:
+
+The shell will first see if there is a file /usr/bin/foo that the user (EUID) has execute
+permission for; if so then that file/command will be executed. Otherwise, the shell
+will next see if there is a file /bin/foothat the user has execute permission for...and so
+forth. If none of the files /usr/bin/foo, /bin/foo, and /usr/local/bin/foo exist or
+none are executable by the user then the shell prints a “command not found” message.
+
+8. Is /sbin in search path of non-root users:
+
+Generally it is not, as the commands in /sbin are intended to be run by admins.
+In fact, some distros do not even have it in the path for root. While non-root users
+have execute permission for most commands in /sbin, many of the commands will not
+actually run correct due to lack of permission to access other files/devices.
+
+9. Why own script foo is not found:
+
+The issue is whether the current working directory is in the search path or not. Some
+distros have it in the search path while others do not. If it is not, then your scriptwill not be found by the shell, so you must supply path info by typing ./foo to run
+the script. Note: the CWD always being in your search path means that “.” will be
+in your PATH; typically it should be the last directory in PATH so that it is searched
+after all system directories.
+
+10. Why no “drive letters” in Linux:
+
+Windows uses “drive letters” to name different patitions and storage devices, each
+of which then has its own separate filesystem (directory) tree. Linux/UNIX systems
+filesystem is organized as one single tree, which different storage devices mounted at
+different subdirectories within the tree.
+
+11. The contents of a file ~/song.mp3:
+
+This is a trick question! We have no way of knowing what the contents of the file
+~/song.mp3 is or whether it is even a regular file—it could be a directory. While
+filenames and extensions may be significant to certain Linux applications, they are
+meaningless to the kernel, which will not make any assumptions about contents.
+
+12. Command to show lines containing “brace expansion” in the Bash man pages:
+
+man bash | grep -i "brace expansion"
+(Note need for -i option to ignore case as required.)
+
+13. Command to delete particular files from /tmp:
+
+rm [AB]*406*{.txt,.text} or rm {A,B}*406*{.txt,.text}
+
+14. cd , cd ~
+
+15. Hidden files:
+Files/directories whose names begin with a dot are considered hidden files, because
+many file listing utilities (e.g., ls) don’t display them by default. Hidden files are
+generally configuration files/directories.
+

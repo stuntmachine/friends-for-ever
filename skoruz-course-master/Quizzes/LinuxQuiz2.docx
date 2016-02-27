@@ -1,0 +1,58 @@
+1. What command would list all files (except . and ..) in the current working directory?
+answer:ls
+2. What is the simplest command for adding execute permission to file ~/foo, for all users
+(without changing any other permissions)?
+answer:chmod +x ~/foo
+3. Explain what execute permission means/allows when it is associated with a directory.
+answer:You can execute (run) the file, if it's a program or script. For folders, this means accessing files in the folder.
+
+4. Suppose that you wanted all users on the machine to be able to see the contents
+of the file ~/public/software/instructions.text. Explain the minimum set of
+permissions for files and directories needed to allow this, and any security issues that
+arise.
+answer:chmod 744 ~/public/software/instructions.text.
+
+5. Suppose that you want to allow (only) other users bob and chuck to be able to access
+the above file. Explain what you would have to do differently from what you described
+above. (You are not allowed to consider the use of ACLs.)
+answer:777 bob chuck (im not sure)
+6. How would your answer to the previous problem change if you were to use ACLs (access
+control lists)?
+
+7. What are set UID (SUID) files, and when are they typically used?
+answer:When set-user identification (setuid) permission is set on an executable file, a process that runs this file is granted access based on the 
+owner of the file (usually root), rather than the user who is running the executable file.
+ This special permission allows a user to access files and directories that are normally only available to the owner. 
+For example, the setuid permission on the passwd command makes it possible for a user to change passwords, 
+8. Find one SUID file on a Linux system, and show its “long listing” (permissions, owner,
+etc.).
+answer:find / -perm +4000
+9. Why are SUID root files considered a security issue?
+answer:If you don’t want to give credentials of a particular user, but want to run some programs as the owner.and
+you don’t want to use SUDO command, but want to give execute permission for a file/script etc.
+10. What command would be used to set a file foo to be SUID, and how exactly would it
+be done?
+answer:chmod u+s file1.txt or chmod 4750 file1.txt
+
+11. What command could determine the process ID (PID) of a running SSH server (sshd)?
+answer:$ ps aux | grep {process no}
+
+12. What command would best identify which process is using excessive CPU resources?
+answer:top 
+
+13. What command that should definitely terminate the process identified above?
+answer:kill PID_of_target_process ex :kill -9 pid
+14. What file contains the list of valid user ID’s (UID’s) and their associated usernames?
+answer:root files
+15. What file contains passwords on a Linux system (if that system is using local authen-
+tication rather than NIS, etc.)?
+answer: Unix systems keep user account information, including one-way encrypted passwords, in a text file called ``/etc/passwd''
+16. What is difference between telnet and ssh. When will you use each command. give examples.
+answer: 
+    SSH and Telnet commonly serves the same purpose
+	SSH is more secure compared to Telnet
+	SSH encrypts the data while Telnet sends data in plain text
+	SSH uses a public key for authentication while Telnet does not use any authentication
+	SSH adds a bit more overhead to the bandwidth compared to Telnet
+	Telnet has been all but replaced by SSH in almost all uses
+

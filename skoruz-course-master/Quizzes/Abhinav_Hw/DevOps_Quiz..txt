@@ -1,0 +1,75 @@
+Name: ABHINAV PONNALA
+
+DevOps-Quiz Test
+
+1. What is the Network ID, Broadcast Address, and first & last valid IP on the subnetwork that the host 192.168.1.15/26 belongs to?
+Ans: Network ID : 192.168.1
+     Broadcast Address : 192.168.1.63
+     First Usable IP : 192.168.1.1
+     Last Usable IP : 192.168.1.62
+
+     
+
+2. What is the broadcast address of network 10.14.64.0/20?
+Ans: Broadcast Address :10.14.79.255
+
+
+3. Which of the following is a valid IP host address given the network ID of 191.254.0.0 while using 11 bits for subnetting?
+a. 191.254.0.32
+b. 191.254.0.96
+c. 191.254.1.29
+d. 191.54.1.64
+Ans: c
+
+4. List the valid host range for subnet 192.168.15.48/28.
+Ans: Range : 192.168.15.49 - 192.168.15.62
+
+5. What is DNS and explain it's usefulness.
+Ans: The domain name system, more commonly known as "DNS" is the networking system.It allows us to solve human friendly names 
+     to unique addresses. A domain name is the human-friendly name that we are used to associating with an internet resource.
+     For example,"google.com" is a domain name and the URL "google.com" is associated with the servers owned by Google Inc. The domain name 
+     system allows us to reach the Google servers when we type "google.com" into our browsers.
+
+
+6. Explain the purpose of NS records and CNAME records in DNS?
+Ans: A NS record or (name server record) tells recursive nameserverswhich name servers areauthoritative fora zone. 
+     Recursive nameservers look at the NS records to work out who to ask next when resolving a name.
+     CNAME stands for Canonical Name. CNAME records can be used to alias one name to another.
+     For example, if you have a server where you keep all of your documents online, it might normally be accessed through docs.example.com.
+     You may also want to access it through documents.example.com. One way to make this possible is to add a CNAME record that points 
+     documents.example.com to docs.example.com. When someone visits documents.example.com they will see the exact same content as docs.example.com
+
+7. Describe the purpose of load balancing and list out the load balancing algorithms.
+Ans: Load balancing is dividing the amount of work that a computer has to do between two or more computers so that more work gets done in the 
+     same amount of time and, in general, all users get served faster. Load balancing can be implemented with hardware, software, or a combination of both. 
+     Typically, load balancing is the main reason for computer server clustering.
+     list of alogorithms:
+     Round Robin,Weighted Round Robin, Random, url, Source IP, Least connections, Least Traffic, Least latency.
+    
+
+8. List out the benefits of Proxy Server.
+Ans: A proxy server works by intercepting connections between sender and receiver.
+     All incoming data enters through one port and is forwarded to the rest of the network via another port. 
+     By blocking direct access between two networks, proxy servers make it much more difficult for hackers to get internal addresses 
+     and details of a private network.
+
+9. What is NAT and explain it's purpose.
+Refer material.
+Ans: It was introduced due to lack of IP addresses or looking it from another view. 
+     It hides computer,servers and It equipments 
+from outside world for security. 
+     The Translation of private IP addresses to public is done by NAT.it would save on the IP addresses we use, 
+     as every single computer does not need a public address, and also it would hide these private 
+computers from the outside world.
+
+10. Explain terms a) TLD b) FQDN c) sub domain in DNS.
+Ans: TLD:A top-level domain, or TLD, is the most general part of the domain. The top-level domain is the furthest portion to the right 
+     (as separated by a dot). Common top-level domains are "com", "net", "org", "gov", "edu", and "io".
+     Top-level domains are at the top of the hierarchy in terms of domain names.
+    
+     FQDN:A fully qualified domain name, often called FQDN, is what we call an absolute domain name. Domains in the DNS system can be 
+     given relative to one another, and as such, can be somewhat ambiguous. A FQDN is an absolute name that specifies its location in 
+     relation to the absolute root of the domain name system.
+    
+     sub domain:A "subdomain" refers to any domain that is part of a larger domain. In this case, "ubuntu.com" can be said to be a 
+     subdomain of "com". This is typically just called the domain or the "ubuntu" portion is called a SLD, which means second level domain.

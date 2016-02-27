@@ -1,0 +1,50 @@
+
+1)What is Git ?
+
+2) In what form is Git being used in your Company ?
+
+3) What are the different Tools that you integrated Git with in your company ?
+
+4) What are Git hooks ?
+
+5) Give us an example of a Git Hook that you implemented?
+
+6) List all commands a developer uses to push to git starting from clean workspace ?
+
+7)Difference between Git push and Git pull
+
+8) Different between Git Rebase and git pull
+
+9) How do you what branch you are currently on ?
+
+10) How do you what other git branches exist on the git server ?
+
+11) what is a git remote ?
+
+12) How can you temporarily save changes before pulling/merging or switching branches?
+
+
+13) difference between git branches and git tags ?
+
+14) what are different types of git tags available ? give exact commands on how to create each type of tag ?
+
+15) what command do you use to merge two branches ? give example
+
+16) How do you know current state of your workspace to that on git server ?
+
+17) What command is used to fetch the latest updates by others?
+
+18) What command is used to create a git repo for your personal development?
+
+19) Explain the relationship between the working directory,
+the index, the repository
+
+20) How can a Git merge fail? What do you do?
+
+21) what command do you use to know list of previous commits ?
+
+22) What is 3a525393f6a5c47fa08d91ef16c16927ed3cd33a?  What are the benefits of this?
+
+23) command to rename a file in Git?
+
+24) What git command is used to undo changes made to your local repo? What are the variations and how do they work?

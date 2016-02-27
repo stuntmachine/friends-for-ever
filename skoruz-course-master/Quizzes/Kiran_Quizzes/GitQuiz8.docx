@@ -1,0 +1,175 @@
+
+
+			Kiranraj jonnalagadda
+1)What is Git ?
+Answer:git is a repository and a version control system which helps to track the changes made to the files in the project. It is help the developers to work in  parallel. 
+Git is a Version control system.
+To maintain the configuration data and to collaborate with the team to identify the number of releases,resources required,Dependencies and release schedule.
+We can secure the code in one repository.
+
+
+2) In what form is Git being used in your Company ?
+
+Answer:
+
+In any company git is used as a version control system. This helps to develop the features of an application in parallel.if an application has 4 features listed then the developers are divided into 4 groups and work on the different features and if one feature completed successfully then they will mearge that feature branch to the main branch or the master branch and the will release the sub branch with certain version name and number.
+To maintain the code in the central repository and integrate with the automation tools to automate build and deployment.
+Different companies use git in different forms, some use, GitHub, some use pure Git on a central server with GitWeb to view repositories in browser, some companies use GitLab
+
+
+3) What are the different Tools that you integrated Git with in your company ?
+Answer:
+  The tools that are integrated in the company with git are jenkins,maven,artifactory,ecllipse,aws.
+
+
+4) What are Git hooks ?
+Answer:
+git hooks are used to reduce the issues occurred from the source code before pushing or merging into the master or main code line. This will help to reduce the problems for the other developers for pushing code to the main line.
+                   These are sample scripts written in any scripting language to run at certain time specified by the devops engineer.
+
+
+5) Give us an example of a Git Hook that you implemented?
+Answer:
+git hooks are written in the .sample files given in the .git directory.
+These can be written in any scripting language
+
+for test:
+if ($1 != 'first commit'){
+return exit;
+}
+else return true;
+enforcing Developers to include Jira ticket number in their commit message, else, commit will fail. This is example of a pre-commit hook.
+
+
+
+6) List all commands a developer uses to push to git starting from clean workspace ?
+Answer:
+git init(to initialize the repository)
+git clone [url](to clone the repo into our local System )
+cd to master directory(change directory to the master )
+git add /input/kiran/.(add modified file to the git)
+Git status(to check the stagged files)
+git commit -m 'first commit'(used for committing the files to the git server with a                                         	                        message for addressing the commit)
+ git push master origin [or] url of the master repo.(this will pushes the all commits to the master)
+
+
+
+7)Difference between Git push and Git pull
+answer:
+git push:
+git push is used to push the commits done in the local system to the server.
+
+Git pull:
+git pull is used to update the local repo with the new commits done in the server to the local system.
+
+8) Different between Git Rebase and git pull
+answer:
+
+git rebase:
+git rebase is used to change the commit from one branch to another.or changing the base of one branch to base of another.
+Git pull :
+git pull is used to pull all the changes made in the server side repository to the local system repository.
+
+
+
+9) How do you what branch you are currently on ?
+
+Answer:
+“git branch” command will show all the branches in the repository and the one with the star mark is your repository.
+
+
+10) How do you what other git branches exist on the git server ?
+
+Answer:
+'git branch -r' shows all the remote branches in the repository.
+
+
+11) what is a git remote ?
+
+Answer:
+git remote is known as the url of our repository.
+
+
+12) How can you temporarily save changes before pulling/merging or switching branches?
+Answer:
+git stash is used to temporarily save our changes to a safe place and later we can go to the another branch and we can do changes and commits over there and we can return back to our original position by using git stash pop.
+
+13) difference between git branches and git tags ?
+Git branches are known as the branches that are used to for development of features and handles bug fixes. Git branches are the one where we get the versions for the tags and these tags carry the versions.the tags will change by time because once we deploy with certain version and after that for some period working done on the bug fixes in that version code then again a new release is send to the corp with new bug fixed version. 
+
+
+
+
+
+14) what are different types of git tags available ? give exact commands on how to create each type of tag ?
+Answer:
+git contains two types of tags they are lightweight tags and annotated tags.
+Lightweight tags are permanent and where as annoted tags are temporary.
+Annotated tag: git tag -a v1
+Lightweight tags :git tag v1
+Tagged later :git log --pretty=one
+shared tags: git push origin
+
+
+15) what command do you use to merge two branches ? give example
+
+answer:
+git merge branch name
+
+git checkout x
+git checkout y
+git merge x
+
+
+for this merging we need to be in a branch where we need to merge the other branch in to it.
+Git checkout will serve for changing the branches. 
+
+
+16) How do you know current state of your workspace to that on git server ?
+Answer:
+git status
+
+
+17) What command is used to fetch the latest updates by others?
+Answer: git pull [url]
+
+
+18) What command is used to create a git repo for your personal development?
+Answer:git init creates a new repository in our local system with .git
+
+
+19) Explain the relationship between the working directory,
+the index, the repository
+answer:git directory is the place where git stores all the metadata in the repository and it is the place where git clones the files from another computer to our local system.if we make any changes to the files in this directory then it will show in the index or cached memory and is known as staging and it will shows as untracked files till we add the files using git add command and later the files become tracked and highlighted and these staged files will be committed using git commit command and then they are sent to the repository this the relationship between the working directory,index and repository.
+
+
+20) How can a Git merge fail? What do you do?
+Answer: these are known as git conflicts if another branch has merged error code before we merge our code than a conflict occurs while we are merging our branch and some other conflicts are there.
+
+21) what command do you use to know list of previous commits ?
+
+Answer:git log is used to show all the privous commits this is a very important command we use to check the previous commits.
+
+
+
+
+
+
+
+
+
+
+22) What is 3a525393f6a5c47fa08d91ef16c16927ed3cd33a?  What are the benefits of this?
+Answer:
+
+SHA1 hash of a git object
+It direct-access content storage, and it also protects from and detects
+corruption
+
+
+23) command to rename a file in Git?
+Answer:git -mv oldfile newfile
+
+
+24) What git command is used to undo changes made to your local repo? What are the variations and how do they work?
+Answer: git reset.

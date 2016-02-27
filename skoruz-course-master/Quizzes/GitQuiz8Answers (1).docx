@@ -1,0 +1,91 @@
+1)What is Git ?
+Git is a Version control system.
+To maintain the configuration data and to collaborate with the team to identify the number of releases,resources required,Dependencies and release schedule.
+We can secure the code in one repository.
+
+2) In what form is Git being used in your Company ?
+It is used as version Control system.
+To maintain the code in the central repository and integrate with the automation tools to automate build and deployment.
+Different companies use git in different forms, some use, GitHub, some use pure Git on a central server with GitWeb to view repositories in browser, some companies use GitLab
+
+3) What are the different Tools that you integrated Git with in your company ?
+Different tools that  we used to integrate Git are Jenkins,Ticketing systems like Jira etc
+
+4) What are Git hooks ?
+ There are two types of Git hooks client-side and server-side. Client-side hooks are triggered by committing and merging, server-side hooks run on network operations like receiving pushed commits.
+
+5) Give us an example of a Git Hook that you implemented?
+If you guys remember, I have given a example, of enforcing Developers to include Jira ticket number in their commit message, else, commit will fail. This is example of a pre-commit hook.
+
+6) List all commands a developer uses to push to git starting from clean workspace ?
+create a repository.
+git clone url
+git add to add the fles
+git commit -m"  "
+git push
+git push
+7)Difference between Git push and Git pull
+git push is used to push the added files to the main repository and git pull is used to pull the files added into the repo by others or simply git pull puts your remote repo updated.
+8) Different between Git Rebase and git pull
+Git Rebase :The git rebase command is basically an automated cherry-pick.It will determine the series of commits .and then cherry picks the commits one by one.
+Git pull : It is the cobination of git fetch and git merge.
+It keeps the repo updated with all the commits.
+ where Git will fetch from the remote you specify and then it will merge it into the branch.
+9) How do you what branch you are currently on ?
+git branch
+10) How do you what other git branches exist on the git server ?
+git branch -a
+11) what is a git remote ?
+It is a management tool to record the remote repositories. It allows you to save long urls as short handles.so that we should not use long urls all the time. It is also used to add, change and delete them
+12) How can you temporarily save changes before pulling/merging or switching branches?
+git checkout
+13) difference between git branches and git tags ?
+Git branch can create,list or delete branches
+Git tags :It is to give bookmark permanently create,list,delete and verify tag object signed with gpg.
+14) what are different types of git tags available ? give exact commands on how to create each type of tag ?
+Annotated tag: git tag -a v1
+Lightweight tags :git tag v1
+Tagged later :git log --pretty=one
+shared tags: git push origin
+
+15) what command do you use to merge two branches ? give example
+git checkout x
+git checkout y
+git merge x
+
+16) How do you know current state of your workspace to that on git server ?
+git status
+17) What command is used to fetch the latest updates by others?
+git pull
+
+18) What command is used to create a git repo for your personal development?
+mkdir x
+git init
+19) Explain the relationship between the working directory,
+the index, the repository
+Working directory : Currently working directory and where the content is unpacked into actual files.
+Index Proposed next commit snapshot
+Repository Where the history of the files are stored
+
+20) How can a Git merge fail? What do you do?
+ It happens when two branches have changed the same part of the same file, and then those branches are merged together.
+We can resolve this conflict by doing git status and find where the conflict occured resolve it then merge the file.
+21) what command do you use to know list of previous commits ?
+git log
+
+22) What is 3a525393f6a5c47fa08d91ef16c16927ed3cd33a?  What are the benefits of this?
+SHA1 hash of a git object
+It direct-access content storage, and it also protects from and detects
+corruption
+
+
+23) command to rename a file in Git?
+git mv
+
+24) What git command is used to undo changes made to your local repo? What are the variations and how do they work?
+git rsest is used to undo changes.
+HEAD-INDEX-WORKING DIRECTORY
+git soft-undo till commit => HEAD
+git mixed-undo till add =>INDEX
+git hard -undo till working directory => working directory
+
